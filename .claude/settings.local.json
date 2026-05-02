@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(venv/Scripts/python.exe -c \"import mediapipe; print\\('version:', mediapipe.__version__\\); print\\('path:', mediapipe.__file__\\); import mediapipe.python.solutions.pose as p; print\\('pose ok:', p.Pose\\)\")",
+      "Bash(venv/Scripts/python.exe -c \"import mediapipe as mp; import pkgutil; print\\([m.name for m in pkgutil.iter_modules\\(mp.__path__\\)]\\)\")",
+      "Bash(venv/Scripts/python.exe -c \"import torch; print\\('torch:', torch.__version__\\); print\\('cuda available:', torch.cuda.is_available\\(\\)\\); print\\('cuda devices:', torch.cuda.device_count\\(\\)\\); print\\('device name:', torch.cuda.get_device_name\\(0\\) if torch.cuda.is_available\\(\\) else 'n/a'\\)\")",
+      "Bash(nvidia-smi)",
+      "Bash(node -e \"console.log\\(require\\('pptxgenjs'\\).version || 'installed'\\)\")",
+      "Bash(npm install *)",
+      "Bash(npm root *)",
+      "Bash(node scripts/build_pptx.js)",
+      "Bash(python \"C:/Users/Utku35/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/916f9ce6-030e-4086-a89d-7a6303a130ca/b30f3150-99f1-4d99-a5d3-1c3d22edb6ca/skills/pptx/scripts/office/soffice.py\" --headless --convert-to pdf FitGuardAI_TEKNOFEST.pptx)",
+      "Bash(where soffice *)",
+      "Bash(where libreoffice *)",
+      "Read(//c/Program Files/LibreOffice/program/**)",
+      "Bash(python -m markitdown \"C:/Users/Utku35/Desktop/teknofest/Araştırma Projesi/Yeni klasör/sunum/FitGuardAI_TEKNOFEST.pptx\")",
+      "Bash(python -m pip install --user \"markitdown[pptx]\")",
+      "Bash(python -c ' *)",
+      "Bash(python -m markitdown \"C:/Users/Utku35/Desktop/teknofest/Araştırma Projesi/Yeni klasör/v11.docx\")",
+      "Bash(node scripts/build_opening_pptx.js)",
+      "Bash(node scripts/build_health_panel_pptx.js)",
+      "Bash(python -c \"from pptx import Presentation; p = Presentation\\(r'C:/Users/Utku35/Desktop/teknofest/Araştırma Projesi/Yeni klasör/sunum/FitGuardAI_Kisisel_Saglik_Paneli.pptx'\\); [print\\(f'Slide {i+1}: {len\\(s.shapes\\)} shapes'\\) for i, s in enumerate\\(p.slides\\)]\")",
+      "Bash(python scripts/build_software_doc.py)"
+    ]
+  }
+}
